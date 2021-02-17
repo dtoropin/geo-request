@@ -1,0 +1,172 @@
+/*! custom reset */
+* {
+	box-sizing: border-box;
+}
+html {
+	min-width: 340px;
+	scroll-behavior: smooth;
+}
+body,
+html {
+	height: 100%;
+	text-rendering: optimizeSpeed;
+}
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	cursor: default;
+}
+body,
+div,
+section,
+aside,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+code,
+form,
+input,
+textarea,
+select,
+fieldset,
+blockquote,
+th,
+td,
+p {
+	margin: 0;
+	padding: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+	display: block;
+}
+a {
+	display: block;
+	outline: none;
+	color: inherit;
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+fieldset,
+img,
+abbr {
+	border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style: normal;
+	font-weight: normal;
+}
+caption,
+th {
+	text-align: left;
+}
+sup {
+	vertical-align: text-top;
+}
+sub {
+	vertical-align: text-bottom;
+}
+legend {
+	color: #000;
+}
+img {
+	width: 100%;
+	height: auto;
+	outline: none;
+}
+button {
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+/* поля ввода */
+input,
+textarea,
+select {
+	width: 100%;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	outline: none;
+}
+textarea {
+	resize: none;
+}
+*::-webkit-input-placeholder {
+	color: #616161;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #616161;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #616161;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #a07979;
+	opacity: 1;
+}
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: #616161;
+}
+body input:required:valid,
+body textarea:required:valid {
+	color: #616161;
+}
+@-webkit-keyframes autofill {
+	to {
+		color: inherit;
+		background: transparent;
+	}
+}
+input:-webkit-autofill {
+	-webkit-animation-name: autofill;
+	-webkit-animation-fill-mode: both;
+}
+:not(output):-moz-ui-invalid {
+	box-shadow: 0 0 1.5px 1px transparent;
+}
+textarea {
+	vertical-align: top;
+}
