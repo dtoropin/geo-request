@@ -13,33 +13,35 @@
 			controls: []
 		});
 
-		let myBalloonLayout =
-			'<div class="popup">' +
-			'<h3 class="popup__title">Отзыв:</h3>' +
-			'<form class="myForm">' +
-			'<div class="myForm__item">' +
-			'<input class="myForm__input" type="text" name="name" placeholder="Укажите ваше имя">' +
-			'</div>' +
-			'<div class="myForm__item">' +
-			'<input class="myForm__input" type="text" name="place" placeholder="Укажите место">' +
-			'</div>' +
-			'<div class="myForm__item">' +
-			'<textarea class= "myForm__input myForm__input--request" name = "request" placeholder = "Оставить отзыв" ></textarea>' +
-			'</div>' +
-			'<div class="myForm__item">' +
-			'<button class="myForm__btn" data-coords="$[latitude], $[longitude]">Добавить</button>' +
-			'</div>' +
-			'</form>' +
-			'</div>';
+		const myBalloonLayout = function (coords) {
+			return '<div class="popup">' +
+				'<h3 class="popup__title">Отзыв:</h3>' +
+				'<form class="myForm">' +
+				'<div class="myForm__item">' +
+				'<input class="myForm__input" type="text" name="name" placeholder="Укажите ваше имя">' +
+				'</div>' +
+				'<div class="myForm__item">' +
+				'<input class="myForm__input" type="text" name="place" placeholder="Укажите место">' +
+				'</div>' +
+				'<div class="myForm__item">' +
+				'<textarea class= "myForm__input myForm__input--request" name = "request" placeholder = "Оставить отзыв" ></textarea>' +
+				'</div>' +
+				'<div class="myForm__item">' +
+				`<button class="myForm__btn" data-coords="${coords.latitude}, ${coords.longitude}">Добавить</button>` +
+				'</div>' +
+				'</form>' +
+				'</div>';
+		}
 
 		map.events.add('click', function (e) {
 
 			if (!map.balloon.isOpen()) {
 				let coords = e.get('coords');
-				// let latitude = coords[0].toPrecision(6),
-				// let longitude = coords[1].toPrecision(6)
 				map.balloon.open(coords, {
-					contentBody: myBalloonLayout
+					contentBody: myBalloonLayout({
+						latitude: coords[0].toPrecision(6),
+						longitude: coords[1].toPrecision(6)
+					})
 				});
 			} else {
 				map.balloon.close();
