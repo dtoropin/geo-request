@@ -8,3 +8,48 @@ body {
 .wrapper {
 	position: relative;
 }
+
+#map {
+	height: 100vh;
+	border: 10px solid rgb(207, 207, 207);
+}
+
+.popup {
+	width: 353px;
+	padding: 30px 27px 30px 17px;
+}
+
+.popup__title {
+	font-weight: 700;
+	margin-bottom: 20px;
+	line-height: 18px;
+}
+
+.myForm__item {
+	margin-bottom: 10px;
+}
+
+.myForm__input {
+	padding: 10px;
+	border-radius: 3px;
+	border: 1px solid #cfcfcf;
+	font-size: 14px;
+	line-height: 16px;
+	&:focus {
+		border: 1px solid #1371c8;
+	}
+	&--request {
+		height: 98px;
+	}
+}
+
+.myForm__btn {
+	padding: 10px 16px;
+	border-radius: 3px;
+	color: #fff;
+	background-color: #ff8663;
+	border: 1px solid #ff8663;
+	&:active {
+		box-shadow: inset 0 0 7px #b1634d;
+	}
+}
